@@ -86,7 +86,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint --fix --no-eslintrc -c .eslintre.js",
+      "eslint --fix --no-eslintrc -c .eslintrc.js",
       "prettier --write"
     ],
     "*.{css,less,sass}": [
