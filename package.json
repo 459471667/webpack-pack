@@ -104,6 +104,7 @@
   ],
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.1",
+    "rc-queue-anim": "^1.8.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

@@ -1,4 +1,5 @@
 import React, {Suspense, useState} from 'react'
+import {Loading} from 'components/Content'
 
 const Content = React.lazy(() => import('components/Content'))
 
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div className="app">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Content />
       </Suspense>
     </div>
