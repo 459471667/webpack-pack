@@ -47,7 +47,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-unicorn": "^21.0.0",
-    "file-loader": "^6.1.1",
+    "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^5.2.1",
     "glob": "^7.1.6",
     "hard-source-webpack-plugin": "^0.13.1",

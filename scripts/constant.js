@@ -11,7 +11,7 @@ const SERVER_PORT = 9000
 const IS_OPEN_HARD_SOURCE = true
 
 // 是否开启 bundle 包分析
-const shouldOpenAnalyzer = true
+const shouldOpenAnalyzer = false
 
 module.exports = {
   PROJECT_PATH,

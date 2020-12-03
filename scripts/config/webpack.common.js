@@ -112,6 +112,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: IS_DEVELOPMENT,
+              publicPath: '../',
             },
           },
         ],
@@ -123,6 +124,7 @@ module.exports = {
           options: {
             limit: 10 * 1024,
             name: '[name].[contenthash:8].[ext]',
+            publicPath: '../assets/images/',
             outputPath: 'assets/images',
           },
         },
@@ -181,11 +183,12 @@ module.exports = {
       },
     }),
     IS_OPEN_HARD_SOURCE && new HardSourceWebpackPlugin(),
-    !IS_DEVELOPMENT &&
-      new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash:8].css',
-        chunkFilename: 'css/[name].[contenthash:8].css',
-        ignoreOrder: false,
-      }),
+    IS_DEVELOPMENT
+      ? () => false
+      : new MiniCssExtractPlugin({
+          filename: 'css/[name].[contenthash:8].css',
+          chunkFilename: 'css/[name].[contenthash:8].css',
+          ignoreOrder: false,
+        }),
   ],
 }

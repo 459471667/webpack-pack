@@ -16,11 +16,12 @@ module.exports = merge(common, {
       paths: glob.sync(`${resolve(PROJECT_PATH, './src')}/**/*.{tsx,scss,less,css}`, {nodir: true}),
       whitelist: ['html', 'body'],
     }),
-    shouldOpenAnalyzer &&
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'server',
-        analyzerHost: '127.0.0.1',
-        analyzerPort: 8888,
-      }),
+    shouldOpenAnalyzer
+      ? new BundleAnalyzerPlugin({
+          analyzerMode: 'server',
+          analyzerHost: '127.0.0.1',
+          analyzerPort: 8888,
+        })
+      : () => false,
   ],
 })
