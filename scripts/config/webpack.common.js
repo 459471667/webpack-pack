@@ -124,7 +124,7 @@ module.exports = {
           options: {
             limit: 10 * 1024,
             name: '[name].[contenthash:8].[ext]',
-            publicPath: '../assets/images/',
+            publicPath: './assets/images/',
             outputPath: 'assets/images',
           },
         },
